@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF2E3; /* Background color: light peach */
+    margin: 0;
+    padding: 0;
+    color: #0038FF; /* Text color: dark blue */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+}
+.title-container {
+    text-align: left;
+    padding: 20px;
+    margin-left: 20px; /* Move the title container to the left */
+    margin-bottom: 20px; /* Add margin below the title */
+  }
+  
+  .title {
+    color: #0034EE;
+    margin-bottom: 5px; /* Add spacing between the title and step */
+    font-size: 65px;
+  }
+
+.step {
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 0; /* Remove bottom margin */
+    margin-left: 0px; /* Add margin to the left */
+    font-size: 47px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 40px); /* 40px is the combined margin of the title */
+    width: 100%;
+}
+.input-container {
+    background-color: #ffffff; /* White background */
+    border-radius: 80px; /* Rounded corners */
+    padding: 10px; /* Add padding */
+    display: inline-block; /* Ensure the container wraps its contents */
+    position: relative;
+    width:40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#file {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #0034EE; /* Blue border */
+    border-radius: 5px;
+    width: 60%; /* Set initial width */
+    max-width: 320px; /* Limit maximum width */
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: red;
+}
+
+.fa-upload {
+    transform: scale(8);
+    margin-bottom: 50px; /* Optional: Add some margin to separate the icon from the text */
+    position: absolute; /* Position the icon absolutely */
+    top: 0; /* Position the icon at the top of the label */
+    left: 50%; /* Align the icon horizontally at the center */
+     /* Adjust for center alignment */
+     margin-top: 12%;
+}
+
+.label-button {
+    font-size: 20px; /* Adjust the font size as needed */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: #0038FF; /* Text color: dark blue */
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%; 
+}
+
+label[for="file"]{
+    background-color: #0038FF;
+    font-size: 20px; /* Adjust the font size as needed */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color:#ffffff; /* Text color: dark blue */
+    padding: 15px;
+    text-align: center;
+    width: 30%;
+    border-radius: 50px;
+}

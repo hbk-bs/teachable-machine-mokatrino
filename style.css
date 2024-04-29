@@ -1,0 +1,59 @@
+body {
+  background-color: #FFF2E3;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+p{
+  margin: 0;
+}
+
+.title-container {
+  text-align: left;
+  padding: 20px;
+  margin-left: 20px; /* Move the title container to the left */
+  margin-bottom: 20px; /* Add margin below the title */
+}
+
+.title {
+  color: #0034EE;
+  margin-bottom: 5px; /* Add spacing between the title and step */
+  font-size: 65px;
+}
+
+.container {
+  display: flex;
+  justify-content:flex-start;
+  width: 70%;
+  align-self: flex-start;
+}
+
+.column {
+  width: 48%; /* Adjust the width as needed */
+  margin: 0 40px;
+}
+
+.paragraph {
+  color: #0034EE;
+  font-size: 30px;
+}
+
+.button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0034EE;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.button:hover {
+  background-color: #001F7E;
+}
+.paragraph-big{
+  font-size: 55px;
+  color: #0034EE;
+  line-height: 1.3em;
+}

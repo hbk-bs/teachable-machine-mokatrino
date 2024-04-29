@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
+<link rel="stylesheet" type="text/css" href="/style3.css">
+
+<body>
+	<div class="title-container">
+		<h1 class="title">STYLE DETECTOR</h1>
+	</div>
+	<div class="container">      
+		<div class="text-column">
+
+			<div id="FORMAL" class="hidden">
+				<h2>FORMAL</h2>
+				<p>
+			
+
+					Hey, thanks for sharing your outfit pic! According to the AI style detector, today your style is formal.
+					Perfect for those occasions where making a sophisticated statement matters. Think important meetings,
+					elegant soirées, or any event where professionalism shines. Your look exudes confidence and elegance –
+					you're definitely ready to impress!
+
+				</p>
+			</div>
+			<div id="ROMANTIC" class="hidden">
+				<h2>ROMANTIC</h2>
+				<p>
+				
+Hey, thank you for sharing your outfit pic! According to the AI style detector, today your style is romantic.
+
+This style is perfect for those dreamy occasions where love is in the air and hearts beat a little faster. Imagine candlelit dinners, sunset strolls, or cozy nights curled up by the fireplace. Your outfit radiates romance and charm, evoking feelings of tenderness and passion. You're dressed to capture hearts and create unforgettable moments – you're definitely ready to sweep someone off their feet!
+				</p>
+			</div>
+			<div id="GRUNGE" class="hidden">
+				<h2>GRUNGE</h2>
+				<p>
+					
+Hey, thanks for sharing your outfit pic! According to the AI style detector, today your style is grunge.
+
+This style is perfect for those edgy occasions where rebellion meets raw authenticity. Think underground concerts, urban exploration, or simply embracing your inner rebel. Your outfit exudes a laid-back attitude with a touch of defiance, effortlessly blending ruggedness with streetwise flair. You're ready to make a statement and break the mold – you're definitely rocking that grunge aesthetic!
+				</p>
+			</div>
+			<div id="2000s" class="hidden">
+				<h2>2000s</h2>
+				<p>
+				
+Hey, thanks for sharing your outfit pic! According to the AI style detector, today your style is reminiscent of the 2000s.
+
+This throwback style is perfect for channeling that early millennium nostalgia, where fashion was all about Y2K vibes and iconic trends. Think low-rise jeans, crop tops, and chunky sneakers – it's all about embracing the bold and vibrant spirit of the era. Whether you're heading to a 2000s-themed party or just reliving those iconic moments, your outfit screams fun and fearless. You're ready to dance the night away and make memories that feel straight out of a retro music video – you're totally owning that 2000s look!
+				</p>
+			</div>
+		</div>
+		<div class="image-column">
+			<img id="uploadedImage" alt="Uploaded Image">
+		</div>
+	</div>
+	<script>
+
+		// Access the uploaded image data from session storage
+		const uploadedImageSrc = sessionStorage.getItem("uploadedImage");
+		console.log(uploadedImageSrc)
+		// Set the image source
+		document.getElementById("uploadedImage").src = uploadedImageSrc;
+
+
+		document.addEventListener("DOMContentLoaded", function () {
+			const params = new URLSearchParams(location.search);
+			console.log(params.get("label"))
+
+			if (params.has("label")) {
+				console.log(params.get("label"));
+				switch (params.get("label")) {
+					case "2000s": {
+						document.getElementById("2000s").classList.remove("hidden");
+						// execute code that is here when it is label 2000s
+
+						break;
+
+					}
+					case "formal": {
+						document.getElementById("FORMAL").classList.remove("hidden");
+
+						// execute code that is here when it is label fff
+
+						break;
+					}
+					case "grunge": {
+						document.getElementById("GRUNGE").classList.remove("hidden");
+						// execute code that is here when it is label 2000s
+
+						break;
+
+					}
+					case "romantic": {
+						document.getElementById("ROMANTIC").classList.remove("hidden");
+						// execute code that is here when it is label 2000s
+
+						break;
+
+					}
+
+				}
+
+			}
+
+
+		});
+	</script>
+
+<a class="button" href="/classify.html">TRY AGAIN!</a>
+
+</body>
+
+</html>
